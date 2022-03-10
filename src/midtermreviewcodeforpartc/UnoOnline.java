@@ -24,11 +24,16 @@ public class UnoOnline
      * @param args - not used
      */
     public static void main(String[] args) 
+            
+            
      {
+         
+           UnoOnline newPortal = new UnoOnline();
+       newPortal.run();
+       
          PasswordValidator pw = new PasswordValidator();
-         pw.run();
-//       UnoOnline newPortal = new UnoOnline();
-//       newPortal.run();
+         pw.validation();
+     
     }
      /**
      * method that takes in the User's name and chosen password
@@ -38,7 +43,26 @@ public class UnoOnline
      * 2. The password must contain at least one "special character"
      * 
      */
-    
+   
+     
+     //method to validate password
+    public void run() {
+       String password ="";
+        int userCount=0;//keep track of number of users for array
+        Scanner sc = new Scanner(System.in);
+        System.out.println("please enter your desired user name:");
+        String userName = sc.nextLine();
+           
+  
+        
+        
+        User newUser = new User(userName, password);
+        users[userCount] = newUser;//add the new user to the user list
+        userCount++;
+        System.out.println("New User Added");
+        System.out.println("UserName: " + userName);
+        System.out.println("Password: just kidding can't show password");
+    }//end run method
    
     
 }//end class
