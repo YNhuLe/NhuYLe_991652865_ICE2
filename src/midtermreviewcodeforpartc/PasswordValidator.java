@@ -9,7 +9,9 @@ public class PasswordValidator {
     public void validation(){
         Scanner sc = new Scanner(System.in);
         boolean validPassword=false;
+      //  System.out.println("Please enter your name: ");
         String password="";
+     //   String userName = sc.nextLine();
         while(!validPassword)
         {
             System.out.println("Passwords must have at least 8 characters");
