@@ -23,18 +23,16 @@ public class UnoOnline
      * main functionality.
      * @param args - not used
      */
-    public static void main(String[] args) 
+    public static void main(String[] args) {
             
             
-     {
+     PasswordValidator pw = new PasswordValidator();
+      pw.validation();
          
-           UnoOnline newPortal = new UnoOnline();
-       newPortal.run();
+      UnoOnline newPortal = new UnoOnline();
+      newPortal.run();
        
-         PasswordValidator pw = new PasswordValidator();
-         pw.validation();
-     
-    }
+      }
      /**
      * method that takes in the User's name and chosen password
      * and then continues prompting until the password is valid based on the
@@ -44,24 +42,25 @@ public class UnoOnline
      * 
      */
    
-     
      //method to validate password
+    
     public void run() {
+        
        String password ="";
         int userCount=0;//keep track of number of users for array
+        
         Scanner sc = new Scanner(System.in);
         System.out.println("please enter your desired user name:");
+        
         String userName = sc.nextLine();
-           
-  
-        
-        
+                 
         User newUser = new User(userName, password);
         users[userCount] = newUser;//add the new user to the user list
         userCount++;
         System.out.println("New User Added");
         System.out.println("UserName: " + userName);
         System.out.println("Password: just kidding can't show password");
+        
     }//end run method
    
     
