@@ -1,0 +1,14 @@
+   
+1. Users enter users' name
+2. Users enter password
+3. Check for length
+    3.1 Password 8 characters
+        3.1.1 Accept the password if it meets the requirements
+    3.2 Password is not 8 characters
+        3.2.1 Display message (requirement for the password length)
+4. Check for password special characters
+    4.1 Password 1 special character
+        4.1.1 Accept the password
+    4.2 Does not have the special character
+        4.2.1 Display message
+5. Password verified and meet the requirement => add users in the list
